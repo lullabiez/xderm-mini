@@ -170,13 +170,13 @@ banner;echo -e "\e[36;3m Menginstall Paket build dan Pendukung...\e[0m";sleep 1;
 python3 -m pip install requests beautifulsoup4;python3 -m pip install -U requests[socks];sleep 2;clear
 banner;echo -e "\e[36;3m Mengunduh Paket badvpn...\e[0m";sleep 1;rm -rf badvpn;git clone https://github.com/ambrop72/badvpn.git;cd badvpn;sleep 2;clear
 banner;echo -e "\e[36;3m Persiapan build....\e[0m";sleep 1;cmake . -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_TUN2SOCKS=1;sleep 2;clear
-banner;echo -e "\e[36;3m Proses building.......\e[0m";sleep 1;make;sleep 2;wget -O /root/config.txt https://raw.githubusercontent.com/ryanfauzi1/xderm-mini/main/config.txt;clear
+banner;echo -e "\e[36;3m Proses building.......\e[0m";sleep 1;make;sleep 2;wget -O /root/config.txt https://raw.githubusercontent.com/lullabiez/xderm-mini/main/config.txt;clear
 banner;echo -e "\e[36;3m Memindahkan file paket ke sistem...\e[0m";sleep 1
 cp tun2socks/badvpn-tun2socks /usr/bin/;cd ..;rm -rf badvpn;sleep 2
 echo -e "\e[31;1m Setup Selesai.\e[0m\n"
 }
  update () {
- url="https://raw.githubusercontent.com/ryanfauzi1/xderm-mini/main"
+ url="https://raw.githubusercontent.com/lullabiez/xderm-mini/main"
  echo -ne "\e[33;1m{$(date +%M:%S)}\e[0m Checking for update..."
  sleep 3
  v=$(curl -m21 $url/xderm-mini -s|grep "Current versi"|awk "NR==2"|awk '{print $6}')
@@ -184,7 +184,7 @@ echo -e "\e[31;1m Setup Selesai.\e[0m\n"
   if [ "$v" != "7.4" ]; then
  echo -e "\e[36;3m (Memperbarui..)\e[0m";sleep 1
  wget -O /usr/bin/xderm-mini $url/xderm-mini -q;chmod +x /usr/bin/xderm-mini
- ch=$(curl -m20 $url/changelog.txt -s)
+ 
  echo -e "   ****************************************"
  echo -e "\e[3m$ch\e[0m\n   ****************************************"
  else
@@ -468,5 +468,5 @@ echo -e "\e[38;3m xderm-mini enable\e[0m \e[34;1m(enable on boot)\e[0m"
 echo -e "\e[38;3m xderm-mini disable\e[0m \e[34;1m(disable on boot)\e[0m"
 echo -e "\e[38;3m xderm-mini update\e[0m \e[34;1m(update versi script)\e[0m\n"
 echo -e "##############################################"
-echo -e "           \e[33;1mCurrent versi 7.3 Copyright ®2021"
+echo -e "           \e[33;1mCurrent versi 7.3 Copyright ryanfauzi1 ®2021"
 echo -e "           Openwrt Tunnel & Logika Bash Linux\e[0m\n"

@@ -5,11 +5,8 @@ dibutuhkan: python3 (gunakan koneksi internet stabil untuk instalasi agar tidak 
 
 # Cara Install
 # sudo su
-# wget -O /usr/bin/xderm-mini https://raw.githubusercontent.com/ryanfauzi1/xderm-mini/main/xderm-mini && chmod +x /usr/bin/xderm-mini
+# wget -O /usr/bin/xderm-mini https://raw.githubusercontent.com/lullabiez/xderm-mini/main/xderm-mini && chmod +x /usr/bin/xderm-mini
 # xderm-mini setup   #khusus PURE LINUX.
-#
-# v2ray:
-# bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)   #khusus PURE LINUX.
 
 ubah/edit file config yang berisi akun ssh dan bug host ssl di /root/config.txt
 

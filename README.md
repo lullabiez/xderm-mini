@@ -17,3 +17,4 @@ setelah setup selesai, ketik xderm-mini untuk perintah yang lain.
 Thanks.
 
 Credit to ryanfauzi1
+
